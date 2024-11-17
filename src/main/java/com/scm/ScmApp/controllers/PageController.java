@@ -11,7 +11,19 @@ public class PageController {
     @GetMapping("/home")
     public String home(Model model) {
         model.addAttribute("name","Bhawuk Arora");
-        System.out.println("Home page controller");
+        System.out.println("Home page loading...");
         return "home";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        System.out.println("About page loading...");
+        return "about";
+    }
+    
+    @GetMapping("/services")
+    public String services() {
+        System.out.println("Services page loading...");
+        return "services";
     }
 }
