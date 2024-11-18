@@ -1,5 +1,17 @@
-<div th:fragment="parent(x,y)">
+<!-- <div th:fragment="parent(x,y)">
     <h1>This is parent fragement</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nulla cumque voluptatibus ullam officiis modi saepe doloribus numquam molestias autem fugit est dolores eaque, dolor omnis! Odio laudantium sint id.</p>
     <h1>Value of x is <span th:text="${x}"></span></h1>
+</div> -->
+
+<div th:fragment="parent(content)">
+    <h1>This is parent fragement</h1>
+    <p>Lorem ipsum dolor sit am consectetur adipisicing elit. Iste, nulla cumque voluptatibus ullam officiis modi saepe doloribus numquam molestias autem fugit est dolores eaque, dolor omnis! Odio laudantium sint id.</p>
+    <div th:replace="${content}"></div>
+</div>
+
+<div th:fragment="test(content)">
+    <h1>This is test fragement.</h1>
+    <div th:replace="${content}"></div>
+    <!-- <p>User logged out.</p> -->
 </div>

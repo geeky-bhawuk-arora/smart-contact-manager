@@ -16,7 +16,8 @@ public class PageController {
     }
 
     @GetMapping("/about")
-    public String about() {
+    public String about(Model model) {
+        model.addAttribute("isLogin",false);
         System.out.println("About page loading...");
         return "about";
     }
